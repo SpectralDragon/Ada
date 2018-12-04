@@ -7,8 +7,8 @@ let package = Package(
     name: "ada-swiftpm",
     products: [
         .executable(
-            name: "Ada-SwiftPM",
-            targets: ["ada-swiftpm"]
+            name: "swift-ada",
+            targets: ["swift-ada"]
         ),
     ],
     dependencies: [
@@ -20,10 +20,13 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
-            name: "ada-swiftpm",
+            name: "swift-ada",
             dependencies: ["Files", "Commander"]),
+        .target(
+            name: "AdaManifestDescription",
+            dependencies: []),
         .testTarget(
-            name: "ada-swiftpmTests",
-            dependencies: ["ada-swiftpm"]),
+            name: "swift-adaTests",
+            dependencies: ["swift-ada"]),
     ]
 )
