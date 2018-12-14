@@ -5,8 +5,8 @@
 //  Created by v.a.prusakov on 04/12/2018.
 //
 
-import Files
 import Foundation
+import Files
 
 final class InitPackage {
     

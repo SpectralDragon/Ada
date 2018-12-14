@@ -10,11 +10,13 @@ let package = Package(
             name: "swift-ada",
             targets: ["swift-ada"]
         ),
+        .library(name: "AdaManifestDescription", type: .dynamic, targets: ["AdaManifestDescription"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
          .package(url: "https://github.com/JohnSundell/Files.git", from: "2.2.1"),
          .package(url: "https://github.com/kylef/Commander.git", .branch("master")),
+         .package(url: "https://github.com/apple/swift-package-manager.git", .branch("master")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
